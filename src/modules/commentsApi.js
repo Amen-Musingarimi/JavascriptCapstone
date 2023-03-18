@@ -1,7 +1,7 @@
 export const postComment = async (commentData) => {
   try {
     const response = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Et4qFKlhg2AwekIfP1aj/comments',
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RaLGAkKXSMxB9RCSemBe/comments',
       {
         method: 'POST',
         headers: {
@@ -24,7 +24,7 @@ export const postComment = async (commentData) => {
 
 export const getComments = async (mealId) => {
   const getStatus = await fetch(
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Et4qFKlhg2AwekIfP1aj/comments?item_id=${mealId}`,
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RaLGAkKXSMxB9RCSemBe/comments?item_id=${mealId}`,
     {
       method: 'GET',
     },
