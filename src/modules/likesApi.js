@@ -1,7 +1,7 @@
 export const postLike = async (likeData) => {
   try {
     const response = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Et4qFKlhg2AwekIfP1aj/likes',
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RaLGAkKXSMxB9RCSemBe/likes',
       {
         method: 'POST',
         headers: {
@@ -24,7 +24,7 @@ export const postLike = async (likeData) => {
 
 export const getLikes = async () => {
   const getStatus = await fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Et4qFKlhg2AwekIfP1aj/likes',
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RaLGAkKXSMxB9RCSemBe/likes',
     {
       method: 'GET',
     },
