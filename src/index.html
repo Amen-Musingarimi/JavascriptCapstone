@@ -20,10 +20,15 @@
         <div class="navLinks">
           <a href="#">Menu:<span class="totalMeals"></span></a>
           <a href="#">Contact</a>
+          <div>
+            <input class="searchInput" type="text" max="30" required />
+            <button class="searchButton" type="button">Search</button>
+          </div>
         </div>
       </nav>
     </header>
     <main>
+      <section class="searchedMeal"></section>
       <section class="mealsListContainer"></section>
       <section class="popupWindow hide"></section>
     </main>
@@ -34,14 +39,18 @@
           class="githubLink"
           href="https://github.com/Amen-Musingarimi"
           target="_blank"
-          >Checkout My Other Projects On Github</a
-        >
+          rel="noopener"
+          >Checkout My Other Projects On Github<i
+            class="fa-brands fa-github"
+          ></i
+        ></a>
         <a
           class="linkedInkLink"
           href="https://www.linkedin.com/in/atmusingarimi/"
           target="_blank"
-          >Checkout My LinkedIn Profile</a
-        >
+          rel="noopener"
+          >Checkout My LinkedIn Profile<i class="fa-brands fa-linkedin"></i
+        ></a>
       </div>
     </footer>
   </body>

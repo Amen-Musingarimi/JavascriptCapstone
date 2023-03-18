@@ -50,6 +50,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **[list_of_names_meals]**
+- **[search_meals]**
 - **[add_a_like]**
 - **[popup_window]**
 - **[add_comment]**
@@ -60,7 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Video Demo Link](https://drive.google.com/file/d/1-rNFKB6WS_X3w1FEG1YcJs6z7Tf2zPkc/view?usp=share_link)
+- [Live Demo Link](https://drive.google.com/file/d/1-rNFKB6WS_X3w1FEG1YcJs6z7Tf2zPkc/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,7 +73,7 @@ To get a local copy up and running, follow these steps.
 
 ### Setup
 
-Clone this repository to your desired folder using the following command; git clone https://github.com/Ashnaali3255/Khanban-Project.git
+Clone this repository to your desired folder using the following command; git clone https://github.com/Amen-Musingarimi/JavascriptCapstone
 
 ### Run tests
 
@@ -99,7 +100,6 @@ You can deploy this project using Github pages.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[search_bar]**
 - [ ] **[contact_page]**
 - [ ] **[reservation_window]**
 

@@ -4,6 +4,7 @@ import { postComment, getComments } from './modules/commentsApi.js';
 import totalComments from './modules/countComments.js';
 import totalMeals from './modules/countMeals.js';
 import { postLike, getLikes } from './modules/likesApi.js';
+import searchMeal from './modules/searchApi.js';
 
 const getNumberOfLikes = (response, likes) => {
   const mealLikes = new Map();
@@ -122,7 +123,7 @@ const renderMeal = async () => {
                 <button class="submitCommentBtn" type="button">Comment</button>
               </form>         
         </article>
-        <a href="#" class="closeBtn"><i class="fa-sharp fa-solid fa-xmark"></i></a>
+        <a href="#" class="closeBtn closeButton"><i class="fa-sharp fa-solid fa-xmark"></i></a>
       `;
 
       const closePopupBtn = document.querySelector('.closeBtn');
@@ -192,4 +193,48 @@ displayMeals();
 
 window.addEventListener('DOMContentLoaded', () => {
   renderMeal();
+});
+
+// Implementing the search functionality
+const searchButton = document.querySelector('.searchButton');
+const searchInput = document.querySelector('.searchInput');
+
+const getSearchedMeal = async () => {
+  const mealName = searchInput.value.trim();
+  if (searchInput.value.trim() !== '') {
+    const mealsListContainer = document.querySelector('.mealsListContainer');
+    const searchedMeal = document.querySelector('.searchedMeal');
+    mealsListContainer.classList.add('hide');
+    searchedMeal.classList.remove('hide');
+    searchedMeal.classList.add('searchedMealContainer');
+    const meal = await searchMeal(mealName);
+    for (let i = 0; i < meal.length; i += 1) {
+      const searchedMealContainer = document.querySelector('.searchedMeal');
+      searchedMealContainer.innerHTML = `
+    <article class="searchedMealCard">
+    <img class="searchedImage" src=${meal[i].strMealThumb} alt=${meal[i].strMeal} />
+    <h3 class="searchedMealTitle">${meal[i].strMeal}</h3>   
+    <div>
+      <h4 class="searchedMealInstructionHeading">Cooking Instructions</h4>
+      <p class="seaarchedMealInstructions">${meal[i].strInstructions}</p>
+    </div>
+  </article>  
+  <a href="#" class="closeSearchBtn closeButton"><i class="fa-sharp fa-solid fa-xmark"></i></a> 
+    `;
+    }
+  }
+  const closeSearchBtn = document.querySelector('.closeSearchBtn');
+  const searchedMeal = document.querySelector('.searchedMeal');
+  const mealsListContainer = document.querySelector('.mealsListContainer');
+
+  closeSearchBtn.addEventListener('click', () => {
+    searchedMeal.classList.add('hide');
+    searchedMeal.classList.remove('searchedMealContainer');
+    mealsListContainer.classList.remove('hide');
+  });
+};
+
+searchButton.addEventListener('click', async () => {
+  await getSearchedMeal();
+  searchInput.value = '';
 });

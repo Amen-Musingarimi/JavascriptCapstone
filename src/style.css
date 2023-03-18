@@ -32,16 +32,8 @@ button {
 }
 
 a {
-  color: var(--color-black);
-}
-
-a,
-a:link,
-a:visited,
-a:focus,
-a:hover,
-a:active {
   cursor: pointer;
+  color: var(--color-black);
 }
 
 /* -------------------------------Styling the Navigation Bar-------------------------------- */
@@ -54,7 +46,7 @@ header {
 
 nav {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   background-color: var(--color-lightest-blue);
   padding: 1% 2%;
@@ -79,6 +71,34 @@ nav a {
 .totalMeals {
   color: var(--color-medium-blue);
   margin-left: 5%;
+}
+
+input,
+textarea {
+  border: 1px solid var(--color-light-blue);
+  padding: 1.5%;
+  width: 60%;
+  border-radius: 8px;
+  outline: none;
+}
+
+nav input {
+  padding: 3%;
+  width: 200px;
+}
+
+nav button {
+  padding: 8px 20px;
+  color: var(--color-white);
+  background-color: var(--color-medium-blue);
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+nav button:hover {
+  background-color: var(--color-hover-blue);
 }
 
 /* -------------------------------Styling the Home Page-------------------------------- */
@@ -179,7 +199,7 @@ main {
   justify-content: center;
   gap: 20px;
   padding: 2%;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .popupCardImage {
@@ -204,15 +224,6 @@ form {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-}
-
-input,
-textarea {
-  border: 1px solid var(--color-light-blue);
-  padding: 1.5%;
-  width: 60%;
-  border-radius: 8px;
-  outline: none;
 }
 
 input::-webkit-credentials-auto-fill-button {
@@ -274,6 +285,55 @@ select:-webkit-autofill:focus {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+}
+
+/* -------------------------------Styling the Search Cards-------------------------------- */
+
+.searchedMealContainer {
+  margin: 2% 10%;
+  border: 1px solid var(--color-medium-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  border-radius: 8px;
+}
+
+.searchedMealCard {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.searchedImage {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  align-self: center;
+  margin-bottom: 16px;
+}
+
+.searchedMealTitle {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.searchedMealInstructionHeading {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.seaarchedMealInstructions {
+  font-weight: 500;
+}
+
+.closeButton {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-dark-blue);
 }
 
 /* -------------------------------Styling the Footer-------------------------------- */
